@@ -13,7 +13,10 @@ function Header() {
   console.log(basket);
   const handleAuthentication = ()=> {
     if (user){
-        auth.signOut();
+      auth.signOut();
+        localStorage.clear();
+
+        basket.splice(0);
     }
   }
   return (
