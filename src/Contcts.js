@@ -3,8 +3,11 @@ import "./Contacts.css";
 import Headers from "./Headers";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Contcts() {
+  AOS.init();
   function sendEmail(e) {
     e.preventDefault();
 
@@ -37,7 +40,13 @@ function Contcts() {
       <Headers />
       <h1>Welcome to Amazon Customer Services</h1>
       <h2>Please fill the below form!</h2>
-      <div id="form" className="form">
+      <div
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+        id="form"
+        className="form"
+      >
         <form onSubmit={sendEmail}>
           <div className="row pt-5 mx-auto">
             <div className="col-8 form-group mx-auto">

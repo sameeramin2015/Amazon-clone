@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"; // in react-dom v6 useHistory is changed to useNvigate
 import React, { useState } from "react";
 import { auth } from "./firebase";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Login() {
+  AOS.init();
   const navigate = useNavigate();
   //const sendSubmit = () => {
   //navigate.push("/");
@@ -46,7 +49,11 @@ function Login() {
           alt=""
         />
       </Link>
-      <div className="login__container">
+      <div
+        data-aos="zoom-in-down"
+        data-aos-duration="2000"
+        className="login__container"
+      >
         <h1>Sign-in</h1>
         <form>
           <h5>E-mail</h5>
