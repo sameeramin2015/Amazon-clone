@@ -2,6 +2,7 @@ import React from "react";
 import "./Headers.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import AddIcCallIcon from "@material-ui/icons/AddIcCall";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 
@@ -30,7 +31,7 @@ function Header() {
               <span className="header__optionLineOne">
                 Hello {!user ? "Guest" : user.email}
               </span>
-              <span className="header__optionLineTwo" >
+              <span className="header__optionLineTwo">
                 {user ? "Sign Out" : "Sign In"}
               </span>
             </div>
@@ -54,6 +55,11 @@ function Header() {
               <span className="header__optionLineTwo header__basketCount">
                 {basket?.length}
               </span>
+              <Link to="/contacts">
+                <div className="call">
+                  <AddIcCallIcon />
+                </div>
+              </Link>
             </div>
           </Link>
         </div>

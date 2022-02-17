@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import AddIcCallIcon from "@material-ui/icons/AddIcCall";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import Home from "./Home";
@@ -32,8 +33,7 @@ function Header() {
 
         <div className="header__nav">
           <Link to="/login">
-            <div onClick={handleAuthentication} 
-            className="header__option">
+            <div onClick={handleAuthentication} className="header__option">
               <span className="header__optionLineOne">
                 Hello {!user ? "Guest" : user.email}
               </span>
@@ -58,9 +58,15 @@ function Header() {
           <Link to="/checkout">
             <div className="header__optionBasket">
               <ShoppingBasketIcon />
+
               <span className="header__optionLineTwo header__basketCount">
                 {basket?.length}
               </span>
+              <Link to="/contacts">
+                <div className="call">
+                  <AddIcCallIcon />
+                </div>
+              </Link>
             </div>
           </Link>
         </div>
