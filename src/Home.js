@@ -65,7 +65,7 @@ function Home() {
         </div>
 
         <div data-aos="zoom-in-down"
-          data-aos-duration="4000" className="home__row">
+          data-aos-duration="3000" className="home__row">
           <Product
             id="90829332"
             title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor - Super Ultra Wide Dual WQHD 5120 x 1440"
