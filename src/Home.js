@@ -1,18 +1,25 @@
-import React from 'react';
+import React from "react";
 import "./Home.css";
-import Product from './Product';
+import Product from "./Product";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
-  return(
+  AOS.init();
+  return (
     <div className="home">
-    <div className="home__container">
-    <img
-    className="home__image"
-    src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
-    alt=""
-  />
-  {/*Product id, titile, price, rating, image */}
-  <div className="home__row">
+      <div className="home__container">
+        <img
+          className="home__image"
+          src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
+          alt=""
+        />
+        {/*Product id, titile, price, rating, image */}
+        <div
+          data-aos="zoom-in-down"
+          data-aos-duration="2000"
+          className="home__row"
+        >
           <Product
             id="12321341"
             title="The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback"
@@ -29,7 +36,11 @@ function Home() {
           />
         </div>
 
-        <div className="home__row">
+        <div
+          data-aos="zoom-in-down"
+          data-aos-duration="3000"
+           className="home__row"
+        >
           <Product
             id="4903850"
             title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
@@ -53,7 +64,8 @@ function Home() {
           />
         </div>
 
-        <div className="home__row">
+        <div data-aos="zoom-in-down"
+          data-aos-duration="4000" className="home__row">
           <Product
             id="90829332"
             title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor - Super Ultra Wide Dual WQHD 5120 x 1440"
@@ -62,8 +74,8 @@ function Home() {
             image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"
           />
         </div>
-  </div>
-  </div>
+      </div>
+    </div>
   );
 }
 
